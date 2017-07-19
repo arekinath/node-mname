@@ -17,7 +17,7 @@ var named = require('./lib/index');
 var server = named.createServer();
 var ttl = 300;
 
-server.listenUdp(9999, '127.0.0.1', function() {
+server.listenUdp({ port: 9999, address: '127.0.0.1' }, function() {
   console.log('DNS server started on port 9999');
 });
 
